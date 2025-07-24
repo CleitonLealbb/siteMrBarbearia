@@ -665,3 +665,64 @@ a:hover .material-symbols-outlined {
   font-size: 0.9rem;
   text-decoration: none;
 }
+/* Telas menores que 1024px (ex: tablets e laptops pequenos) */
+@media (max-width: 1024px) {
+  .section--home {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+  }
+  /* Esconde elementos no mobile */
+@media (max-width: 600px) {
+  .hide-mobile {
+    display: none !important;
+  }
+}
+
+  .img--barbudo {
+    justify-content: center;
+    margin: 20px 0;
+  }
+
+  .img--barbudo > img {
+    width: 80%;
+    height: auto;
+  }
+
+  .informations {
+    align-items: center;
+    margin: 0 20px;
+  }
+
+  .informations > h1 {
+    font-size: 2.5rem;
+  }
+}
+
+/* Adicione suas media queries aqui */
+@media (max-width: 768px) {
+  /* Ajustes para telas menores que 768px */
+}
+
+@media (max-width: 480px) {
+  /* Ajustes para telas menores que 480px */
+}
+
+/* Exemplo de ajuste de imagens */
+.img--left img,
+.img--right img,
+.section--logo--img > img,
+.section--nossa--historia--img > img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Exemplo de ajuste de contêineres */
+.container--grids {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+

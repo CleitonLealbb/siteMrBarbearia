@@ -50,10 +50,7 @@
  font-weight: 100;
  font-size: 12px;
 }
-.material-symbols-outlined {
-  font-size: 18px;
-  vertical-align: middle;
-}
+
 a:hover .material-symbols-outlined {
   transform: rotate(180deg);
   transition: transform 0.3s ease;
@@ -665,64 +662,105 @@ a:hover .material-symbols-outlined {
   font-size: 0.9rem;
   text-decoration: none;
 }
-/* Telas menores que 1024px (ex: tablets e laptops pequenos) */
-@media (max-width: 1024px) {
-  .section--home {
-    flex-direction: column;
-    height: auto;
-    text-align: center;
-  }
-  /* Esconde elementos no mobile */
-@media (max-width: 600px) {
-  .hide-mobile {
-    display: none !important;
-  }
+
+/* Desktop (col-lg) 992px+ */
+@media (min-width: 992px) {
+    
 }
 
-  .img--barbudo {
-    justify-content: center;
-    margin: 20px 0;
-  }
-
-  .img--barbudo > img {
-    width: 80%;
-    height: auto;
-  }
-
-  .informations {
-    align-items: center;
-    margin: 0 20px;
-  }
-
-  .informations > h1 {
-    font-size: 2.5rem;
-  }
+/* Desktop e Tablets (col-md) 768px a 991px */
+@media (min-width: 768px) and (max-width: 991px) {
+    
 }
 
-/* Adicione suas media queries aqui */
-@media (max-width: 768px) {
-  /* Ajustes para telas menores que 768px */
+/* Tablets (col-sm) 576px a 767px */
+@media (min-width: 767px) and (max-width: 767px) {
+    
 }
 
-@media (max-width: 480px) {
-  /* Ajustes para telas menores que 480px */
-}
+/* Tablets e Celulares (col) 0px a 767px */
+@media (max-width: 767px) {
+  
 
-/* Exemplo de ajuste de imagens */
-.img--left img,
-.img--right img,
-.section--logo--img > img,
-.section--nossa--historia--img > img {
-  max-width: 100%;
-  height: auto;
+    .navbar--menu{
+      display: flexbox;
+      height: 50px;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+     
+    }
+    .links--menu>a{
+      font-size: 10px !important;
+    }
+    .agendamento>button{
+      width: 80px;
+      font-size: 10px !important;
+      padding: 5px 10px;
+    }
+    .section--home{
+      display: flex;
+      width: 100%;
+      height: 400px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .img--barbudo>img{
+      display: none;
+    }
+    .informations{
+     display: flex;
+     justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin-right: 0px;
+      padding: 20px;
+      margin-bottom: 100px;
+    }
+    .informations>h1{
+      font-size: 2.5rem;
+      justify-content: center;
+      text-align: center;
+    }
+    .informations>p{
+      font-size: 0.8rem;
+      justify-content: center;
+      text-align: center;
+    }
+    .button--agendar{
+      width: 150px;
+      padding: 10px 30px;
+    
+    }
+   
+    .section--information{
+      height: 100%;
+      padding: 20px 0;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .titulo--section{
+      display: flex;
+      font-size: 1.5rem;
+      padding: 20px 60px;
+      margin-left: 0px;
+      justify-content: center;
+    }
+    .container--img{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      padding: 20px 60px;
+    }
+    .conainer--logo--hors{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+    }
 }
-
-/* Exemplo de ajuste de contêineres */
-.container--grids {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-}
-

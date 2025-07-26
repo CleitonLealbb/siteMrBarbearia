@@ -2,8 +2,8 @@
 let currentIndex = 0;
 function changeBackgroundImage() {
     const images = [
-        'url("./src/assets/images/imagem1.jpg")',
-        'url("./src/assets/images/imagem2.jpg")',
+        'url("./src/assets/images/imagem1.svg")',
+        'url("./src/assets/images/imagem2.svg")',
         
     ];
     

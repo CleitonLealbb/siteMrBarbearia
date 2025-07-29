@@ -1,0 +1,40 @@
+@media (max-width: 768px) {
+  
+  .logo {
+    display: flex;
+    height: 40px;
+    width: 40px;
+    justify-content: flex-start;
+  }
+  .logo img{
+    display: flex;
+    margin-left: 40px;
+    justify-content: flex-start;
+  }
+  .links--menu {
+    display: none;
+  }
+  .agendamento{
+    display: none;
+  }
+  .mobile--menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-right: 40px;
+  }
+  .informations{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-right: 40px;
+    height: auto;
+  }
+
+  
+  
+}

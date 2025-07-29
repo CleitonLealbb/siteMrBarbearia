@@ -1,8 +1,8 @@
 * {
   margin: 0;
   padding: 0;
-  overflow-y: hidden;
 }
+
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap');
 
@@ -15,6 +15,13 @@
   --cor-texto: #ffffffff;
   --cor-terceria: #303030ff;
   --cor-degrade--1: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25));
+  --cor-degrade--2: linear-gradient(0deg, rgb(17, 22, 28), rgba(17, 22, 28, 0.949)), ;
+}
+body{
+
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
 .navbar--menu {
@@ -23,7 +30,7 @@
   width: 100%;
   background-color: var(--cor-primaria);
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .logo {
@@ -31,10 +38,31 @@
   height: 40px;
   width: 40px;
   flex: 1;
-  justify-content: flex-end;
 
 }
+.logo img{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-left: 80px;
+}
 
+.mobile--menu {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.mobile--menu div{
+
+  width: 32px;
+  height: 2px;
+  background: #fff;
+  margin: 4px;
+  transition: 0.3s;
+}
 .links--menu {
   display: flex;
   flex: 2;
@@ -53,10 +81,6 @@
   font-size: 12px;
 }
 
-a:hover .material-symbols-outlined {
-  transform: rotate(180deg);
-  transition: transform 0.3s ease;
-}
 
 
 .links--menu>a:hover {
@@ -68,8 +92,8 @@ a:hover .material-symbols-outlined {
 
 .agendamento {
   display: flex;
-  flex: 1;
-  justify-content: flex-start;
+ margin-right: 80px;
+  
 
 }
 
@@ -91,34 +115,35 @@ a:hover .material-symbols-outlined {
 
 .section--home {
   display: flex;
+  flex-direction: column;
+  align-items: flex-end;
   justify-content: center;
-  align-content: center;
-  width: 100%;
-  height: 500px;
-  background-color: var(--cor-terceria);
+  height: 100vh;
+  width: 100vw;
+  background-position: 40% 60%;
+  /* background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('../images/human-face-expressions-min.jpg'); */
+  background-image: url('../images/Frame\ 1.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--cor-section);
+  color: var(--cor-texto);
+  font-family: "Roboto", sans-serif;
 }
 
-.img--barbudo {
-  display: flex;
-  flex: 1;
 
-}
-
-.img--barbudo>img {
-  display: flex;
-  align-items: center;
-  margin-left: 70px;
-}
+  
 
 .informations {
   display: flex;
-  flex: 1;
   justify-content: center;
   flex-direction: column;
+  align-items: flex-end;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  margin-right: 80px; 
   font-family: "Roboto", sans-serif;
   color: var(--cor-texto);
-  align-items: flex-end;
-  margin-right: 190px;
 
 }
 
@@ -734,267 +759,4 @@ a:hover .material-symbols-outlined {
   color: var(--cor-itens);
   font-size: 0.9rem;
   text-decoration: none;
-}
-
-
-
-/* Desktop (col-lg) 992px+ */
-@media (min-width: 992px) {}
-
-/* Desktop e Tablets (col-md) 768px a 991px */
-@media (min-width: 768px) and (max-width: 991px) {}
-
-/* Tablets (col-sm) 576px a 767px */
-@media (min-width: 576px) and (max-width: 767px) {}
-
-/* Tablets e Celulares (col) 0px a 767px */
-@media (max-width: 767px) {
-  .navbar--menu {
-    display: flex;
-    /* Corrigido de flexbox para flex */
-    height: 50px;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .links--menu>a {
-    font-size: 10px !important;
-  }
-
-  .agendamento>button {
-    width: 80px;
-    font-size: 10px !important;
-    padding: 5px 10px;
-  }
-
-  .section--home {
-    display: flex;
-    width: 100%;
-    height: 400px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .img--barbudo>img {
-    display: none;
-  }
-
-  .informations {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-right: 0;
-    padding: 20px;
-    margin-bottom: 100px;
-  }
-
-  .informations>h1 {
-    font-size: 2.5rem;
-    text-align: center;
-  }
-
-  .informations>p {
-    font-size: 0.8rem;
-    text-align: center;
-  }
-
-  .button--agendar {
-    width: 150px;
-    padding: 10px 30px;
-  }
-
-  .section--information {
-    height: 100%;
-    padding: 20px 0;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .titulo--section {
-    display: flex;
-    font-size: 1.5rem;
-    padding: 20px 60px;
-    margin-left: 0;
-    justify-content: center;
-  }
-
-  .container--img {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    padding: 20px 60px;
-  }
-
-  .conainer--logo--hors {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-  }
-
-  .information--service--section>a {
-    text-decoration: none;
-    color: var(--cor-itens);
-  }
-
-  .section--nossa--historia {
-    height: 100%;
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .conteiner--section--nossa--historia {
-    display: flex;
-    height: 60%;
-    width: 60%;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-direction: column;
-  }
-
-  .section--nossa--historia--text {
-    align-items: center;
-    justify-content: center;
-    text-align: left;
-    font-size: 0.8rem;
-    line-height: 1.3;
-  }
-
-  .section--nossa--historia--img {
-    display: none;
-  }
-
-  .services--price{
-    height: auto;
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  .conteiner--imgs-icons{
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  .conteiner--grids{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding: 20px 0;
-  } 
-  .conteiner--img{
-    width: 100%;
-    height: 200px;
-    margin-right: 0;
-  }
-  
-  .section--story-imgs {
-    height: 250px;
-    width: 100%;
-  }
- 
-
-  .section--pacotes--descontos {
-    height: auto;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 30px;
-    
-  }
-
-  .promo {
-    flex-direction: column;
-    align-items: center;
-    margin-right: 0;
-    margin-top: 20px;
-  }
-
-  .promo--porcentagem>h2 {
-    font-size: 2.5rem;
-    margin-left: 0;
-  }
-
-  .information--desconto {
-    margin-left: 0;
-    margin-top: 10px;
-    align-items: center;
-  }
-
-  .information--desconto>h2 {
-    font-size: 1.2rem;
-  }
-
-  .information--desconto>p {
-    font-size: 0.9rem;
-    text-align: center;
-    max-width: 90%;
-  }
-
-  .button--black {
-    width: 100%;
-    max-width: 200px;
-    font-size: 1rem;
-  }
-
-
-
-
-  .footer--logo--hors {
-    display: none;
-  }
-
-  .section--footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 400px;
-    width: 100%;
-    gap: 20px;
-  }
-
-  .container--footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-  }
-
-  .footer--information--localizacao {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-  }
-
-  .questoes--footer--social {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    font-size: 0.8rem;
-    text-decoration: none;
-    color: var(--cor-texto);
-    font-family: "Roboto", sans-serif;
-    margin-bottom: 10px;
-    gap: 5px;
-  }
 }

@@ -11,3 +11,5 @@ function changeBackgroundImage() {
     currentIndex = (currentIndex + 1) % images.length;
 
 }setInterval(changeBackgroundImage, 3000);
+
+
